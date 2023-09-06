@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    
+    <!--Main Content-->
+    <div class="my-5">
+      <div class="mx-auto w-25 " style="max-width:100%;">
+        <h2 class="text-center mb-3">Update Customer</h2>
+        <form  [formGroup]="form" (ngSubmit)="submit()" >
+
+          <!--firstName-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input id="firstName"  formControlName="firstName" type="text" name="firstName" class="form-control" placeholder="firstName" required>
+            </div>
+          </div>
+
+           <!--lastName-->
+           <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input id="lastName"  formControlName="lastName" type="text" name="lastName" class="form-control" placeholder="lastName" required>
+            </div>
+          </div>
+          <!--Street-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="street" class="form-label">Street </label>
+              <input id="street"  formControlName="street" type="text" name="street" class="form-control" placeholder="Street" required>
+            </div>
+          </div>
+
+          <!--Address-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="address" class="form-label">Address </label>
+              <input id="address"  formControlName="address" type="text" name="address" class="form-control" placeholder="address" required>
+            </div>
+          </div>
+
+          <!--City-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="city" class="form-label">City </label>
+              <input id="city"  formControlName="city" type="text" name="city" class="form-control" placeholder="city" required>
+            </div>
+          </div>
+
+          <!--State-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="state" class="form-label">State</label>
+              <input id="state"  formControlName="state" type="text" name="state" class="form-control" placeholder="state" required>
+            </div>
+          </div>
+
+          <!--email-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="email" class="form-label">Email </label>
+              <input id="email"  formControlName="email" type="email" name="email" class="form-control" placeholder="email" required>
+            </div>
+          </div>
+
+          
+          <!--PNo-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input id="phone" type="text" formControlName="phone" name="phone"class="form-control" placeholder="Phone Number" required>
+            </div>
+          </div>
+         
+         
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <button [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">Button</button>
+            </div>
+          </div>
+
+          <div>
+            
+          </div>
+        </form>
+  
+      </div>
+    </div>
+    
+</body>
+</html>
